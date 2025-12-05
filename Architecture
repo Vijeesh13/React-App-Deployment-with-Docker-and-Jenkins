@@ -1,0 +1,25 @@
+          ┌────────────────────────────┐
+          │        User Browser        │
+          │  (Chrome / Edge / Safari)  │
+          └─────────────┬──────────────┘
+                        │  HTTP (Port 80)
+                        ▼
+          ┌────────────────────────────┐
+          │      Docker Container      │
+          │  Image: React + Nginx      │
+          ├────────────────────────────┤
+          │         Nginx              │
+          │  Serves static React build │
+          └─────────────┬──────────────┘
+                        │
+                        ▼
+          ┌────────────────────────────┐
+          │     React Build Files      │
+          │   (HTML, JS, CSS, assets)  │
+          └────────────────────────────┘
+
+          ┌────────────────────────────┐
+          │        Host Server         │
+          │  (EC2 / VM / Bare Metal)   │
+          │  - Docker Engine           │
+          └────────────────────────────┘
